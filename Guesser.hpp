@@ -1,6 +1,5 @@
-#ifndef GUESSER_HPP
-#define GUESSER_HPP
 
+#pragma once
 #include <string>
 
 using namespace std;
@@ -8,16 +7,22 @@ using namespace std;
 namespace bullpgia{
 
   class Guesser{
+  private:
+    string myGuess;
   public:
+    Guesser(){
+      myGuess = "";
+    }
+    Guesser(const string& temp){
+      myGuess = temp;
+    }
+    virtual ~Guesser(){}
     // variabales
     uint length;
-
     // functions
-    
-    void startNewGame(uint length);
-    virtual string guess();
-    void learn(string solutions);
+    virtual void startNewGame(uint length);
+    virtual string guess() = 0;
+    virtual void learn(string solutions);
+
   };
 };
-
-#endif GUSSER_HPP

@@ -3,7 +3,7 @@
 using std::string;
 
 /**
- * ConstantChooser is a chooser that always chooses the same string. 
+ * ConstantChooser is a chooser that always chooses the same string.
  */
 class ConstantChooser: public bullpgia::Chooser {
 		string myConstantString;
@@ -20,5 +20,3 @@ class ConstantChooser: public bullpgia::Chooser {
 class RandomChooser: public bullpgia::Chooser {
 		string choose(uint length) override;
 };
-
-

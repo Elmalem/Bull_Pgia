@@ -4,4 +4,6 @@
 
 using namespace std;
 
-string calculateBullAndPgia(string choice,string guess);
+namespace bullpgia{
+string calculateBullAndPgia(const string& choice,const string& guess);
+};

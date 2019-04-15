@@ -1,6 +1,5 @@
-#ifndef CHOOSER_HPP
-#define CHOOSER_HPP
 
+#pragma once
 #include <string>
 
 using namespace std;
@@ -8,11 +7,18 @@ using namespace std;
 namespace bullpgia{
 
   class Chooser{
+  private:
+    string myChoose;
   public :
-    Chooser();
-    virtual string choose(uint length);
+    Chooser(){
+      myChoose = "";
+    }
 
+    Chooser(const string& temp){
+      myChoose = temp;
+    }
+    virtual ~Chooser(){}
+    virtual string choose(uint length) = 0;
+    virtual uint length();
   };
 };
-
-#endif CHOOSER_HPP

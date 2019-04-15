@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 
 
@@ -7,5 +8,5 @@ using namespace std;
 
 
 void Guesser::startNewGame(uint length){}
-string Guesser::guess(){}
+string Guesser::guess() {return "";}
 void Guesser::learn(string solutions){}
