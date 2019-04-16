@@ -13,12 +13,11 @@ namespace bullpgia{
     Chooser(){
       myChoose = "";
     }
-
     Chooser(const string& temp){
       myChoose = temp;
     }
     virtual ~Chooser(){}
     virtual string choose(uint length) = 0;
-    virtual uint length();
+    virtual uint length(){}
   };
 };

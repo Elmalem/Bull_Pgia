@@ -5,5 +5,5 @@
 using namespace std;
 
 namespace bullpgia{
-string calculateBullAndPgia(const string& choice,const string& guess);
+string calculateBullAndPgia(string choice,string guess);
 };

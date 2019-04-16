@@ -19,9 +19,9 @@ namespace bullpgia{
       myGuess = temp;
     }
     ~SmartGuesser(){}
-    // void learn(string solutions);
+    void learn(string solutions) override;
     string guess() override;
-    // void startNewGame(uint length);
+    void startNewGame(uint length) override;
 
   };
 };
