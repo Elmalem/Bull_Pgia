@@ -3,6 +3,7 @@
 
 using namespace std;
 
-string bullpgia::calculateBullAndPgia(string choice,string guess){
-  return "";
+string bullpgia::calculateBullAndPgia(const string& choice,const string& guess){
+  string ans = "";
+  return ans;
 }

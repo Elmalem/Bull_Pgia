@@ -18,6 +18,6 @@ namespace bullpgia{
     }
     virtual ~Chooser(){}
     virtual string choose(uint length) = 0;
-    virtual uint length(){}
+    uint length();
   };
 };

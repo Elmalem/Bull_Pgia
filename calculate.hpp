@@ -1,9 +1,9 @@
-#include<iostream>
+#pragma once
 
 #include <string>
 
 using namespace std;
 
 namespace bullpgia{
-string calculateBullAndPgia(string choice,string guess);
-};
+string calculateBullAndPgia(const string& choice,const string& guess);
+};//end for the namespace

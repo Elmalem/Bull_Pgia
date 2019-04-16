@@ -1,6 +1,7 @@
 
 #pragma once
 #include <string>
+#include "calculate.hpp"
 
 using namespace std;
 
