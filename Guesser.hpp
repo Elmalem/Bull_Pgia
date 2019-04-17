@@ -10,11 +10,14 @@ namespace bullpgia{
   class Guesser{
   private:
     string myGuess;
+  protected:
+    string my(){return myGuess;}
   public:
     Guesser(){
       myGuess = "";
     }
     Guesser(const string& temp){
+      if(temp.length() == 4)
       myGuess = temp;
     }
     virtual ~Guesser(){}
