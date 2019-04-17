@@ -19,4 +19,4 @@ The game may also be played by two teams of 2–3 players, with the team members
 A computer program moo, written in 1970 by J. M. Grochow at MIT in the PL/I computer language for the Multics operating system, was amongst the first Bulls and Cows computer implementations, inspired by a similar program written by Frank King in 1968 and running on the Cambridge University mainframe. Because the game has simple rules, while it is difficult and entertaining, there are many computer variants; it is often included in telephones and PDAs.
 
 It is proven that any number could be solved within seven turns. Minimal average game length is 26274/5040=5.2131 turns.[1][2] 
-# this information taken from wiki and cplusplus
+## this information taken from wiki and cplusplus
