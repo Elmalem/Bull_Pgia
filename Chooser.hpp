@@ -16,7 +16,6 @@ namespace bullpgia{
       myChoose = "";
     }
     Chooser(const string& temp){
-      if(temp.length() == 4)
       myChoose = temp;
     }
     virtual ~Chooser(){}
