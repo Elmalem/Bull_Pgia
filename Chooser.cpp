@@ -4,10 +4,6 @@
 using namespace bullpgia;
 using namespace std;
 
-string Chooser::choose(uint length){
-  return "";
-}
-
 uint Chooser::length(){
   return myChoose.length;
 }

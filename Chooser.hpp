@@ -11,7 +11,7 @@ namespace bullpgia{
     string myChoose;
   protected:
     string my(){return myChoose;}
-  public :
+  public:
     Chooser(){
       myChoose = "";
     }

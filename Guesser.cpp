@@ -6,6 +6,6 @@ using namespace bullpgia;
 using namespace std;
 
 
-void Guesser::startNewGame(uint length){cout<<"do start"<<endl;}
+void Guesser::startNewGame(uint length){}
 string Guesser::guess() {return "";}
-void Guesser::learn(string solutions){cout<<"do learn"<<endl;}
+void Guesser::learn(string solutions){}
