@@ -1,4 +1,3 @@
-
 #pragma once
 #include <string>
 #include "calculate.hpp"
@@ -6,7 +5,6 @@
 using namespace std;
 
 namespace bullpgia{
-
   class Guesser{
   private:
     string myGuess;
@@ -17,7 +15,6 @@ namespace bullpgia{
       myGuess = "";
     }
     Guesser(const string& temp){
-      if(temp.length() == 4)
       myGuess = temp;
     }
     virtual ~Guesser(){}
