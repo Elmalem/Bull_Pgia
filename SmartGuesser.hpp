@@ -9,23 +9,25 @@ namespace bullpgia{
     private :
     string myGuess;
     // to learn the solutions
-    uint bull;
-    uint pgia;
+    uint bull=0;
+    uint pgia=0;
     // to know what the game position
-    bool game_on;
-
+    int length=myGuess.length();
+    bool game_on=false;
+    bool founddigit=false;
+    string solution="";
+    int ans[4]={-1,-1,-1,-1};
+    int guesserhelper=-1;
+    int counter=0;
     public :
-    uint length;
     SmartGuesser(){
-      bull = 0;
-      pgia = 0;
-      game_on = false;
     }
     SmartGuesser(const string& temp){
       myGuess = temp;
       bull = 0;
       pgia = 0;
       game_on = false;
+      uint length;
     }
     ~SmartGuesser(){}
     void learn(string solutions) override;

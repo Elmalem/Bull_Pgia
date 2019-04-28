@@ -1,42 +1,65 @@
 #include <string>
 #include "SmartGuesser.hpp"
-
 using namespace std;
 
-// exapmle for it - "4,0" present 4 bull and 0 pgia
-void bullpgia::SmartGuesser:: learn(string solutions) { // learn() get the "bull,pgia" format string
-  size_t i = solutions.find(','); // the seperator
-  int x = stoi(solutions.substr(0,i)); // bulls
-  int y = stoi(solutions.substr(i+1,solutions.length())); // pgias
-  bull += x; // add to the private member(bull)
-  pgia += y; // add to the private m  ember(pgia)
-  game_on = false; // we finished the round
-}
-
-void bullpgia::SmartGuesser:: startNewGame(uint length) {
-  game_on = true; // game on
-}
-
-string bullpgia::SmartGuesser:: guess(){ // it's a smart guess ,according to bull and pgia we will know what we need to guess
-  if(!game_on){ // if it's time to guess now
-    switch (bull) {
-      case 1:{
-
-        break;
-      }
-      case 2:{
-
-        break;
-      }
-      case 3:{
-
-        break;
-      }
-      case 4:{
-
-        break;
+void bullpgia::SmartGuesser:: learn(string solutions) {
+  size_t i = solutions.find(',');
+  int x = stoi(solutions.substr(0,i));
+  int y = stoi(solutions.substr(i+1,solutions.length()));
+  if(!founddigit){
+    try
+    {
+      if(y>0){
+        for(int i=0;i<y;i++){
+          solution+=to_string(guesserhelper);
       }
     }
-    return "1234";}
-  else{return "sorry,wait for the end of the round";} // it's no a game time
+    }catch(const std::exception& e){
+      std::cerr << e.what() << '\n';
+    }
+    bull = x;
+    pgia += y;
+    if(pgia=4){
+      founddigit=true;
+      bull=0,pgia=0,guesserhelper=-1;
+    }
+    guesserhelper++;
+  }
+  else if(x==4){
+    bull = 4;
+    myGuess=to_string(ans[0])+to_string(ans[1])+to_string(ans[2])+to_string(ans[3]);
+  }
+  else {
+    if(x>0){
+      ans[guesserhelper]=solution.at(counter)-'0';
+      guesserhelper++;
+      counter++%4;
+    }
+  }
+}
+string bullpgia::SmartGuesser:: guess(){
+  myGuess="";
+  int turns=0;
+    if(!founddigit&&pgia<4){
+      for(int i=0;i<4;i++){
+        myGuess+=to_string(guesserhelper);
+      }
+    }
+    else if(bull==4){
+      game_on=false;
+      return myGuess;
+    }
+    else{
+      if(ans[guesserhelper]==-1){
+        for(int i=0;i<guesserhelper;i++){
+          myGuess+="a";
+        }
+        myGuess+=to_string(solution.at(counter));
+      }
+    }
+    turns++;
+    return myGuess;
+}
+void bullpgia::SmartGuesser:: startNewGame(uint length) {
+  game_on = true;
 }
