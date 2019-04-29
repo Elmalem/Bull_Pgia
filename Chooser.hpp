@@ -8,9 +8,8 @@ namespace bullpgia{
 
   class Chooser{
   private:
+    // variabales
     string myChoose;
-  // protected:
-    // string my(){return myChoose;}
   public:
     Chooser(){
       myChoose = "";
@@ -18,6 +17,7 @@ namespace bullpgia{
     Chooser(const string& temp){
       myChoose = temp;
     }
+    // functions
     virtual ~Chooser(){}
     virtual string choose(uint length) = 0;
     uint length();
