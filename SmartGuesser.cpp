@@ -21,7 +21,7 @@ void bullpgia::SmartGuesser:: learn(string solutions) {
     }
     bull = x;
     pgia += x;
-    if(pgia==4&&once){
+    if(pgia==length&&once){
       founddigit=true;
       bull=0,pgia=0,guesserhelper=-1;
     }
@@ -30,8 +30,8 @@ void bullpgia::SmartGuesser:: learn(string solutions) {
 }
 string bullpgia::SmartGuesser:: guess(){
   myGuess="";
-    if(!founddigit&&pgia<4){
-      for(int i=0;i<4;i++){
+    if(!founddigit&&pgia<length){
+      for(int i=0;i<length;i++){
         myGuess+=to_string(guesserhelper);
       }
     }
@@ -41,12 +41,12 @@ string bullpgia::SmartGuesser:: guess(){
         once=false;
       }
       myGuess=ans[counter];
-      counter=(counter+1)%24;
+      counter=(counter+1);
       }
     turns++;
     return myGuess;
 }
-void bullpgia::SmartGuesser:: startNewGame(uint length) {
+void bullpgia::SmartGuesser:: startNewGame(uint len) {
   string myGuess="";
   bull=0;
   pgia=0;
@@ -59,4 +59,5 @@ void bullpgia::SmartGuesser:: startNewGame(uint length) {
   vec.clear();
   guesserhelper=0;
   counter=0;
+  length=len;
 }

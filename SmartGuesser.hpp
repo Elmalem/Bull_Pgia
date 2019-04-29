@@ -12,9 +12,8 @@ namespace bullpgia{
     // to learn the solutions
     uint bull=0;
     uint pgia=0;
+    uint length=0;
     int turns=0;
-    // to know what the game position
-    int length=myGuess.length();
     bool founddigit=false;
     bool once=true;
     string solution="";
@@ -28,7 +27,7 @@ namespace bullpgia{
       myGuess = temp;
       bull = 0;
       pgia = 0;
-      uint length;
+      length=0;
     }
     ~SmartGuesser(){}
     void learn(string solutions) override;
