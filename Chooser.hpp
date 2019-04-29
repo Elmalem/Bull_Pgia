@@ -9,8 +9,8 @@ namespace bullpgia{
   class Chooser{
   private:
     string myChoose;
-  protected:
-    string my(){return myChoose;}
+  // protected:
+    // string my(){return myChoose;}
   public:
     Chooser(){
       myChoose = "";

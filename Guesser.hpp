@@ -8,8 +8,10 @@ namespace bullpgia{
   class Guesser{
   private:
     string myGuess;
-  protected:
-    string my(){return myGuess;}
+    // variabales
+    
+  // protected:
+    // string my(){return myGuess;}
   public:
     Guesser(){
       myGuess = "";
@@ -17,9 +19,8 @@ namespace bullpgia{
     Guesser(const string& temp){
       myGuess = temp;
     }
-    virtual ~Guesser(){}
-    // variabales
     uint length;
+    virtual ~Guesser(){}
     // functions
     virtual void startNewGame(uint length){}
     virtual string guess() = 0;
