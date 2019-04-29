@@ -1,4 +1,5 @@
-// C++ program to distinct permutations of the string 
+// C++ program to distinct permutations of the string
+// credit to : https://www.geeksforgeeks.org/distinct-permutations-string-set-2/
 #include <bits/stdc++.h> 
 #include <string>
 #include <vector>
