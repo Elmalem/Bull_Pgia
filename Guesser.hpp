@@ -7,11 +7,9 @@ using namespace std;
 namespace bullpgia{
   class Guesser{
   private:
+     // variabales
     string myGuess;
-    // variabales
     
-  // protected:
-    // string my(){return myGuess;}
   public:
     Guesser(){
       myGuess = "";
