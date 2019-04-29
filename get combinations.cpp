@@ -5,7 +5,7 @@
 #include <vector>
 using namespace std; 
 
-static vector<string> vec;  
+vector<string> vec;  
 // Returns true if str[curr] does not matches with any of the 
 // characters after str[start] 
 bool shouldSwap(string str, int start, int curr) 
@@ -37,7 +37,7 @@ void findPermutations(string str, int index, int n)
         } 
     } 
 } 
-static vector<string> getcombi(string s){
+vector<string> getcombi(string s){
     int count =0;
     string str=s;
     int n=str.length();
