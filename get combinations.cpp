@@ -40,10 +40,7 @@ static vector<string> getcombi(string s){
     int count =0;
     string str=s;
     int n=str.length();
-    findPermutations(str, 0, n);
-    // for(int i=0;i<vec.size();i++){
-	// cout<<vec[i]<<endl;
-	// }	 
+    findPermutations(str, 0, n);	 
     return vec; 
 }  
  
