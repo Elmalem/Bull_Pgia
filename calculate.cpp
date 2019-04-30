@@ -7,12 +7,12 @@ string bullpgia::calculateBullAndPgia(const string choice,const string guess){
   int bull = 0,pgia=0,i;
   string ans="";
   int arrchoice[10],arrguess[10];
-  if(choice.size()<guess.size()){
-  	for(int i=0;i<choice.size();i++){
-		ans+=guess.at(i);
-	}
-  }
-  else
+  //if(choice.size()<guess.size()){
+  //	for(int i=0;i<choice.size();i++){
+//		ans+=guess.at(i);
+//	}
+  //}
+  //else
 	ans=guess;
   for (i=0;i<10;i++){
     arrchoice[i]=0,arrguess[i]=0;
