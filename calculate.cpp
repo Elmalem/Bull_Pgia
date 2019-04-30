@@ -10,15 +10,15 @@ string bullpgia::calculateBullAndPgia(const string choice,const string guess){
     arrchoice[i]=0,arrguess[i]=0;
   }
   for(i=0;i<choice.length();i++){
-    if(choice[i]==gueess[i])
+    if(choice[i]==guess[i])
       bull++;
   }
   for(i=0;i<choice.length();i++){
     int temp=(choice[i])-'0';
     arrchoice[temp]++;
   }
-  for (i=0;i<ans.length();i++){
-    int temp=(gueess[i])-'0';
+  for (i=0;i<guess.length();i++){
+    int temp=(guess[i])-'0';
     arrguess[temp]++;
   }
   for (i=0;i<10;i++){
