@@ -17,9 +17,7 @@ namespace bullpgia{
     bool founddigit=false;
     bool once=true;
     string solution="";
-    vector<string> ans;
     int guesserhelper=0;
-    int counter=0;
     public :
     SmartGuesser(){
     }

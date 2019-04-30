@@ -37,27 +37,23 @@ string bullpgia::SmartGuesser:: guess(){
     }
     else{
       if(once){
-        ans=getcombi(solution);
+        vec=getcombi(solution);
         once=false;
       }
-      myGuess=ans[counter];
-      counter=(counter+1);
+      myGuess=vec[guesserhelper];
+      guesserhelper=(guesserhelper+1);
       }
     turns++;
     return myGuess;
 }
 void bullpgia::SmartGuesser:: startNewGame(uint len) {
-  string myGuess="";
   bull=0;
   pgia=0;
   turns=0;
-  length=myGuess.length();
   founddigit=false;
   once=true;
   solution="";
-  ans.clear();
   vec.clear();
   guesserhelper=0;
-  counter=0;
   length=len;
 }
