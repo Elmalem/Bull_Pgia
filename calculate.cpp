@@ -1,5 +1,6 @@
 #include <string>
 #include"calculate.hpp"
+#include <iostream>
 using namespace std;
 using namespace bullpgia;
 
