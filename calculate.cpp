@@ -5,25 +5,29 @@ using namespace std;
 using namespace bullpgia;
 
 string bullpgia::calculateBullAndPgia(const string choice,const string guess){
-  if(choice.size()>guess.size())
-    cout<<"problem"<<endl;
-  if(guess.size()>choice.size())
-    cout<<"ops"<<endl;
+  string ans="";
+  if(guess.size()>choice.size()){
+    for(int i=0;i<choice.size();i++){
+      ans+=guess.at(i);
+    }
+  }
+  else
+    ans=guess;
   int bull = 0,pgia=0,i;
   int arrchoice[10],arrguess[10];
   for (i=0;i<10;i++){
     arrchoice[i]=0,arrguess[i]=0;
   }
   for(i=0;i<choice.length();i++){
-    if(choice[i]==guess[i])
+    if(choice[i]==ans[i])
       bull++;
   }
   for(i=0;i<choice.length();i++){
     int temp=(choice[i])-'0';
     arrchoice[temp]++;
   }
-  for (i=0;i<guess.length();i++){
-    int temp=(guess[i])-'0';
+  for (i=0;i<ans.length();i++){
+    int temp=(ans[i])-'0';
     arrguess[temp]++;
   }
   for (i=0;i<10;i++){
