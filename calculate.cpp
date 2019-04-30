@@ -7,6 +7,8 @@ using namespace bullpgia;
 string bullpgia::calculateBullAndPgia(const string choice,const string guess){
   if(choice.size()>guess.size())
     cout<<"problem"<<endl;
+  if(guess.size()>choice.size())
+    cout<<"ops"<<endl;
   int bull = 0,pgia=0,i;
   int arrchoice[10],arrguess[10];
   for (i=0;i<10;i++){
