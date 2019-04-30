@@ -5,7 +5,7 @@ using namespace std;
 using namespace bullpgia;
 
 string bullpgia::calculateBullAndPgia(const string choice,const string guess){
-  if(cohice.size()!=guess.size()){
+  if(choice.size()!=guess.size()){
     cout<<"the size is different!!!!!!!!!!!!!!!!!!!!!"<<endl;
   }
   int bull = 0,pgia=0,i;
